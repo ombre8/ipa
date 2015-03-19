@@ -1,0 +1,130 @@
+\documentclass{beamer}
+\usepackage[ngerman]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{hyperref}
+\usepackage{tabularx}
+\usepackage{graphicx}
+\usepackage{geometry}
+\usepackage{listings}
+\usepackage{color}
+%\usepackage{menukeys}
+\hypersetup{%
+  colorlinks=false,% hyperlinks will be black
+  pdfborderstyle={/S/U/W 0}% border style will be underline of width 1pt
+}
+\definecolor{mygreen}{rgb}{0,0.6,0}
+\definecolor{mygray}{rgb}{0.5,0.5,0.5}
+\definecolor{mymauve}{rgb}{0.58,0,0.82}
+\lstloadlanguages{Ruby}
+\lstset{ %
+  backgroundcolor=\color{white},   % choose the background color; you must add \usepackage{color} or \usepackage{xcolor}
+  basicstyle=\footnotesize,        % the size of the fonts that are used for the code
+  breakatwhitespace=false,         % sets if automatic breaks should only happen at whitespace
+  breaklines=true,                 % sets automatic line breaking
+  captionpos=b,                    % sets the caption-position to bottom
+  commentstyle=\color{mygreen},    % comment style
+  deletekeywords={...},            % if you want to delete keywords from the given language
+  escapeinside={\%*}{*)},          % if you want to add LaTeX within your code
+  extendedchars=true,              % lets you use non-ASCII characters; for 8-bits encodings only, does not work with UTF-8
+  frame=single,                    % adds a frame around the code
+  keepspaces=true,                 % keeps spaces in text, useful for keeping indentation of code (possibly needs columns=flexible)
+  keywordstyle=\color{blue},       % keyword style
+  language=Ruby,                 % the language of the code
+  morekeywords={*,...},            % if you want to add more keywords to the set
+  numbers=left,                    % where to put the line-numbers; possible values are (none, left, right)
+  numbersep=5pt,                   % how far the line-numbers are from the code
+  numberstyle=\tiny\color{mygray}, % the style that is used for the line-numbers
+  rulecolor=\color{mygray},         % if not set, the frame-color may be changed on line-breaks within not-black text (e.g. comments (green here))
+  showspaces=false,                % show spaces everywhere adding particular underscores; it overrides 'showstringspaces'
+  showstringspaces=false,          % underline spaces within strings only
+  showtabs=false,                  % show tabs within strings adding particular underscores
+  stepnumber=1,                    % the step between two line-numbers. If it's 1, each line will be numbered
+  stringstyle=\color{mymauve},     % string literal style
+  tabsize=2,                       % sets default tabsize to 2 spaces
+  title=\lstname                   % show the filename of files included with \lstinputlisting; also try caption instead of title
+}
+%\lstset{literate=%
+%{Ö}{{\"O}}1
+%{Ä}{{\"A}}1
+%{Ü}{{\"U}}1
+%{ß}{{\ss}}2
+%{ü}{{\"u}}1
+%{ä}{{\"a}}1
+%{ö}{{\"o}}1
+%}
+
+\title[Titel_short] % (optional, only for long titles)
+{Titel}
+%\subtitle{}
+\author{Vorname Name} %[Author, Anders] (optional, for multiple authors)
+%{Vorname Name}
+%\institute[Universitäten Hier und Dort] % (optional)
+%{
+%  \inst{1}%
+%  Institut für Informatik\\
+%  Universität Hier
+%  \and
+%  \inst{2}%
+%  Institut für theoretische Philosophie\\
+%  Universität Dort
+%}
+\date% [KPT 2004] (optional)
+{IPA Präsentation 6. März 2014}
+\subject{Informatik}
+\usetheme{Berlin}
+
+\begin{document}
+\frame{\titlepage}
+\begin{frame}
+\frametitle{Ablauf}
+\begin{itemize}
+	\item 
+\end{itemize}
+\end{frame}
+\begin{frame}
+ \frametitle{Titel1}
+ \begin{itemize}
+	 \item Bla
+	 \begin{itemize}
+		\item Blabla
+	\end{itemize}
+	\pause \item Blup
+	\begin{itemize}
+		\item Blupblup
+	\end{itemize}
+ \end{itemize}
+\end{frame}
+
+\begin{frame}%[allowframebreaks]
+  \frametitle{Weiterführende Literatur}    
+  \begin{thebibliography}{10}    
+  \beamertemplatearticlebibitems
+  \bibitem{Autor1990}
+    Autorennamen
+    \newblock {\em  Titel}
+    \newblock Verlag
+ \beamertemplatearticlebibitems
+  \end{thebibliography}
+\end{frame}
+\begin{frame}
+\frametitle{Demonstration}
+
+\end{frame}
+\begin{frame}
+\frametitle{Besten Dank für Ihre Aufmerksamkeit!}
+Ich freue mich auf eine angeregte Diskussion.\\
+%bigger spacing would be nice
+Vorname Name: {\em mail@firma.ch}
+\end{frame}
+%\begin{frame}
+%\begin{block}{Block title}
+%This is a block in blue
+%\end{block}
+
+%\begin{alertblock}{Alert-block title}
+%This is a block in red
+%\end{alertblock}
+
+
+%\end{frame}
+\end{document}

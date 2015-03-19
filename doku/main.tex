@@ -1,0 +1,202 @@
+% IPA Dokumentation
+% Haupdatei
+%
+% 2013 by Lukas Grimm <ombre@ombre.ch>
+\documentclass[a4paper,11pt,oneside]{report}
+\usepackage[utf8]{inputenc}
+\usepackage[ngerman]{babel}
+\usepackage{makeidx}
+\usepackage{hyperref}
+\usepackage{tabularx}
+\usepackage{graphicx}
+\usepackage{geometry}
+\usepackage{pdflscape}
+\usepackage{fancyhdr}
+\setlength{\headheight}{15.2pt}
+\usepackage{listings}
+\usepackage{color}
+%\usepackage{menukeys}
+\hypersetup{%
+  colorlinks=false,% hyperlinks will be black
+  pdfborderstyle={/S/U/W 0}% border style will be underline of width 1pt
+}
+\definecolor{mygreen}{rgb}{0,0.6,0}
+\definecolor{mygray}{rgb}{0.5,0.5,0.5}
+\definecolor{mymauve}{rgb}{0.58,0,0.82}
+\lstloadlanguages{Ruby}
+\lstset{ %
+  backgroundcolor=\color{white},   % choose the background color; you must add \usepackage{color} or \usepackage{xcolor}
+  basicstyle=\footnotesize,        % the size of the fonts that are used for the code
+  breakatwhitespace=false,         % sets if automatic breaks should only happen at whitespace
+  breaklines=true,                 % sets automatic line breaking
+  captionpos=b,                    % sets the caption-position to bottom
+  commentstyle=\color{mygreen},    % comment style
+  deletekeywords={...},            % if you want to delete keywords from the given language
+  escapeinside={\%*}{*)},          % if you want to add LaTeX within your code
+  extendedchars=true,              % lets you use non-ASCII characters; for 8-bits encodings only, does not work with UTF-8
+  frame=single,                    % adds a frame around the code
+  keepspaces=true,                 % keeps spaces in text, useful for keeping indentation of code (possibly needs columns=flexible)
+  keywordstyle=\color{blue},       % keyword style
+  language=Ruby,                 % the language of the code
+  morekeywords={*,...},            % if you want to add more keywords to the set
+  numbers=left,                    % where to put the line-numbers; possible values are (none, left, right)
+  numbersep=5pt,                   % how far the line-numbers are from the code
+  numberstyle=\tiny\color{mygray}, % the style that is used for the line-numbers
+  rulecolor=\color{mygray},         % if not set, the frame-color may be changed on line-breaks within not-black text (e.g. comments (green here))
+  showspaces=false,                % show spaces everywhere adding particular underscores; it overrides 'showstringspaces'
+  showstringspaces=false,          % underline spaces within strings only
+  showtabs=false,                  % show tabs within strings adding particular underscores
+  stepnumber=1,                    % the step between two line-numbers. If it's 1, each line will be numbered
+  stringstyle=\color{mymauve},     % string literal style
+  tabsize=2,                       % sets default tabsize to 2 spaces
+  title=\lstname                   % show the filename of files included with \lstinputlisting; also try caption instead of title
+}
+\lstset{literate=%
+{Ö}{{\"O}}1
+{Ä}{{\"A}}1
+{Ü}{{\"U}}1
+{ß}{{\ss}}2
+{ü}{{\"u}}1
+{ä}{{\"a}}1
+{ö}{{\"o}}1
+}
+%\usepackage{epigraph}
+%\setlength\epigraphwidth{8cm}
+%\setlength\epigraphrule{0pt}
+
+% Definition of columtypes for nice tables
+\newcolumntype{b}{X}
+\newcolumntype{s}{>{\hsize=.25\hsize}X}
+%\newcommand{\heading}[1]{\multicolumn{1}{c}{#1}}
+\setlength{\headheight}{13.6pt}
+\pagestyle{fancyplain}
+\fancyhead[L]{Vorname Nachname}
+\fancyhead[C]{\today}
+\fancyhead[R]{Firma}
+%\fancyfoot[C]{}
+
+\begin{document}
+\author{Vorname Nachname \\ 
+    Firma \\ 
+    \texttt{email@firma.ch} }
+\date{\today}
+\title{IPA Dokumentation: \\
+    Titel }
+%\pagestyle{myheadings}
+%\markright{Vorname Nachname\hfill \today \hfill}
+\maketitle
+\section{Dokumentinformationen}
+\nopagebreak
+\input{preface/dokumentinformationen}
+
+\tableofcontents
+\listoffigures
+\listoftables
+
+\renewcommand{\abstractname}{Management Summary}
+\begin{abstract}
+\thispagestyle{plain}
+\input{preface/managementsummary}
+\end{abstract}
+\part{Ablauf und Umfeld}
+
+
+\chapter{Aufgabenstellung}
+Die Punkte 1.1 bis 1.3 sind wortgetreu von der Eingabe des Fachvorgesetzten auf pkorg.ch kopiert worden.
+\input{part1/aufgabenstellung}
+
+\chapter{Vorkenntnisse}
+\begin{itemize}
+	\item Vorkenntnis 1
+\end{itemize}  
+%\input{part1/vorkenntnisse}
+
+\chapter{Vorarbeiten}
+\begin{itemize}
+	\item Bestellung Hardware
+	\item Setup 
+	\item Backuptest
+	\item Dokumentation Vorlage in \LaTeX{}
+\end{itemize}
+%\input{part1/vorarbeiten}
+
+\chapter{Firmenstandards}
+\input{part1/firmenstandards}
+
+\chapter{Organisation der IPA}
+\nopagebreak
+\input{part1/organisation}
+
+\chapter{Zeitplan}
+%%%\input{part1/Zeitplanung}
+\input{part1/zeitplan}
+
+\chapter{Arbeitsjournal}
+Die Festlegungen dieses Dokuments gelten im Projekt .\\
+Gemäss Art. 5 Absatz 2 der Wegleitung über die individuelle praktische Arbeit (IPA) an Lehrabschlussprüfungen des BBT vom 27. August 2001 gilt:\\
+„Die zu prüfende Person führt ein Arbeitsjournal. Sie dokumentiert darin täglich das Vorgehen, den Stand der Prüfungsarbeit, sämtliche fremde Hilfestellungen und besondere Vorkommnisse wie z.B. Änderungen der Aufgabenstellung, Arbeitsunterbrüche, organisatorische Probleme, Abweichungen von der Soll-Planung.“\\
+Das Arbeitsjournal zur IPA ist zwingend zu führen und den Experten und Fachvorgesetzten vorzulegen. Das Arbeitsjournal ist täglich sinngemäss und korrekt auszufüllen.\\
+Das Arbeitsjournal dient der Nachvollziehbarkeit der von den Lernenden ausgeführten Arbeiten und wird als Teil der IPA in die Bewertung mit einbezogen.
+\newpage
+\input{inputs.tex}
+
+\chapter{Abschlussbericht}
+\input{part1/abschlussbericht}
+
+\chapter{Unterschriften Teil I}
+Die lernende Person bestätigt mit ihrer Unterschrift diese IPA aus Eigenleistung erbracht und nach den Vorgaben der Prüfungskommission Informatik Kanton Bern erstellt zu haben. Die Angaben im Arbeitsjournal entsprechen dem geleisteten Arbeitsaufwand.\\
+
+\begin{table}
+\begin{tabularx}{\textwidth}{ |X|X|X| }
+\hline
+Datum & Name / OE & Unterschrift \\ \hline
+ & Name Vorname (Lernender) & \\[5ex] \hline
+ & Name Vorname (Fachvorgesetzter) & \\[5ex] \hline
+\end{tabularx}
+\caption{Unterschriften Teil I}
+\end{table}
+
+\part{Projektdokumentation}
+\chapter{Projektumriss}
+\input{part2/projektumriss}
+
+\chapter{Step-By-Step Anleitung}
+\input{part2/step}
+
+\chapter{Tests}
+\input{part2/test}
+%\chapter{Voranalyse}
+%\input{part2/voranalyse}
+
+%\chapter{Konzept}
+%\input{part2/konzept}
+
+%\chapter{Realisierung}
+%\input{part2/realisierung}
+
+%\chapter{Einführung / Abschluss}
+%\input{part2/abschluss}
+
+\chapter{Unterschriften Teil II}
+Die lernende Person bestätigt mit ihrer Unterschrift diese IPA aus Eigenleistung erbracht und nach den Vorgaben der Prüfungskommission Informatik Kanton Bern erstellt zu haben. Die Angaben im Arbeitsjournal entsprechen dem geleisteten Arbeitsaufwand.\\
+
+\begin{table}
+\begin{tabularx}{\textwidth}{ |X|X|X| }
+\hline
+Datum & Name / OE & Unterschrift \\ \hline
+ & Vorname Name (Lernender) & \\[5ex] \hline
+ & Vorname Name (Fachvorgesetzter) & \\[5ex] \hline
+\end{tabularx}
+\caption{Unterschriften Teil II}
+\end{table}
+
+\part{Anhang}                                                                                                                                                                                                                                       
+\section{Glossar}
+\begin{tabularx}{\textwidth}{s|b}
+\textbf{Begriff} & \textbf{Bedeutung} \\
+KVM & Kernel-based Virtual Machine: Eine Virtualisierungsmöglichkeit unter Linux \\
+\end{tabularx}
+\pagebreak
+\section{Verwendete Dateien}
+\input{anhang/anhang.tex}
+\end{document}
